@@ -1,0 +1,145 @@
+/* Global styles */
+body {
+  background-color: #eff4fc;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #9eb7e0;
+}
+
+.header h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Progress bar styles */
+.progress-container {
+  width: 100%;
+  height: 27px;
+  background-color: #535de0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  margin: 2px 0;
+  height: 25px;
+  background-image: url("images/cat_rot.svg");
+  background-repeat: repeat-x;
+  background-size: 30px 24px;
+  width: 0%;
+}
+
+/* Balloon styles */
+#balloon {
+  position: fixed;
+  bottom: -100px;
+  right: 5px;
+  width: 60px;
+  height: 100px;
+  background-image: url("images/balloon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 5s ease-in-out;
+  z-index: 1000;
+}
+
+.balloon-fly {
+  transform: translateY(calc(-100vh + 75.5px));
+}
+
+/* Coupon styles */
+#coupon {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 2px solid #4a90e2;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  z-index: 1001;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.coupon h3 {
+  color: #4a90e2;
+  margin-top: 0;
+}
+
+.coupon-code {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.coupon-code:hover {
+  background-color: #e0e0e0;
+}
+
+.copied {
+  color: #4a90e2;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #4a90e2;
+}
+
+/* Coupon animation */
+.coupon-fall {
+  animation: fall 1.5s cubic-bezier(0.68, 0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: -100px;
+    transform: translateX(-50%) rotate(5deg);
+  }
+  70% {
+    top: calc(100vh - 300px);
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  85% {
+    top: calc(100vh - 320px);
+    transform: translateX(-50%) rotate(1deg);
+  }
+  100% {
+    top: calc(100vh - 300px);
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+/* Footer styles */
+footer {
+  width: 100%;
+  background-color: #9eb7e0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Main content styles */
+.text {
+  padding: 100px 20px;
+  min-height: 2000px;
+}

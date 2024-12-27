@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balloon and Coupon Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header with progress bar -->
+    <header class="header">
+      <h2>Header</h2>
+      <div class="progress-container">
+        <div id="myBar" class="progress-bar"></div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main role="main">
+      <div class="content">
+        <div class="text">
+          <title>Scroll down to see the progress bar</title>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+
+    <!-- Balloon element -->
+    <div id="balloon"></div>
+
+    <!-- Coupon element -->
+    <div id="coupon" class="coupon">
+      <button id="closeCoupon" class="close-button">&times;</button>
+      <h3>Your Discount Coupon</h3>
+      <p>Discount: <span id="discount"></span>%</p>
+      <p>Code: <span id="code" class="coupon-code"></span></p>
+      <small>Click on the code to copy</small>
+    </div>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
